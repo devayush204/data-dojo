@@ -12,6 +12,8 @@ import Timer from "../Timer/Timer";
 import { useRouter } from "next/router";
 import { problems } from "@/utils/problems";
 import { Problem } from "@/utils/types/problem";
+import { Button } from "../ui/button";
+import { SidebarTrigger } from "../ui/sidebar";
 
 type TopbarProps = {
 	problemPage?: boolean;
@@ -44,10 +46,11 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 	return (
 		<nav className='relative flex h-[50px] w-full shrink-0 items-center px-5 bg-dark-layer-1 text-dark-gray-7'>
 			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1200px] mx-auto" : ""}`}>
-				<Link href='/' className='h-[22px] flex-1'>
-					<Image src='/logo-full.png' alt='Logo' height={100} width={100} />
-				</Link>
-
+				{/* <Link href='/' className='h-[22px] flex-1'>
+					<Image src='/logo.jpeg' alt='Logo' height={50} width={100} />
+				</Link> */}
+<SidebarTrigger/>
+				<Button  >Button</Button>
 				{problemPage && (
 					<div className='flex items-center gap-4 flex-1 justify-center'>
 						<div

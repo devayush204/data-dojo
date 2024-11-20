@@ -1,18 +1,31 @@
 import ProblemsTable from "@/components/ProblemsTable/ProblemsTable";
+import { AppSidebar } from "@/components/sidebar/Sidebar";
 import Topbar from "@/components/Topbar/Topbar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import useHasMounted from "@/hooks/useHasMounted";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
 	const [loadingProblems, setLoadingProblems] = useState(true);
 	const hasMounted = useHasMounted();
+
+	useEffect(() => {
+		// Set a timeout to hide loading skeleton after 3 seconds
+		const timer = setTimeout(() => {
+			setLoadingProblems(false);
+		}, 3000);
+
+		// Cleanup timeout on component unmount
+		return () => clearTimeout(timer);
+	}, []); // Empty dependency array means this runs once on mount
 
 	if (!hasMounted) return null;
 
 	return (
 		<>
 			<main className='bg-dark-layer-2 min-h-screen'>
+				
 				<Topbar />
 				<h1
 					className='text-2xl text-center text-gray-700 dark:text-gray-400 font-medium

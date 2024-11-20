@@ -21,9 +21,9 @@ export const jumpGameHandler = (fn: any) => {
 	}
 };
 
-const starterCodeJumpGameJS = `function canJump(nums) {
-  // Write your code here
-};`;
+const starterCodeJumpGameJS = `def can_jump(nums):
+    # Write your code here
+    `;
 
 export const jumpGame: Problem = {
 	id: "jump-game",
@@ -56,6 +56,6 @@ export const jumpGame: Problem = {
     <li class='mt-2'><code>0 <= nums[i] <= 10^5</code></li>`,
 	starterCode: starterCodeJumpGameJS,
 	handlerFunction: jumpGameHandler,
-	starterFunctionName: "function canJump(",
+	starterFunctionName: "def can_jump(",
 	order: 3,
 };

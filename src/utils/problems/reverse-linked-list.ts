@@ -65,17 +65,14 @@ function getListValues(head: LinkedList): number[] {
 }
 
 const starterCodeReverseLinkedListJS = `
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-// Do not edit function name
-function reverseLinkedList(head) {
-  // Write your code here
-};`;
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+def reverse_linked_list(head):
+    # Write your code here
+    `;
 
 export const reverseLinkedList: Problem = {
 	id: "reverse-linked-list",
@@ -104,6 +101,6 @@ export const reverseLinkedList: Problem = {
 <li class='mt-2'><code>-5000 <= Node.val <= 5000</code></li>`,
 	starterCode: starterCodeReverseLinkedListJS,
 	handlerFunction: reverseLinkedListHandler,
-	starterFunctionName: "function reverseLinkedList(",
+	starterFunctionName: "def reverse_linked_list(",
 	order: 2,
 };

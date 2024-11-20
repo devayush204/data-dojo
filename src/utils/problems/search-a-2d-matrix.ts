@@ -34,10 +34,9 @@ export const search2DMatrixHandler = (fn: any) => {
 		throw new Error(error);
 	}
 };
-const starterCodeSearch2DMatrixJS = `// Do not edit function name
-function searchMatrix(matrix, target) {
-  // Write your code here
-};`;
+const starterCodeSearch2DMatrixJS = `def search_matrix(matrix, target):
+    # Write your code here
+    `;
 
 export const search2DMatrix: Problem = {
 	id: "search-a-2d-matrix",
@@ -83,6 +82,6 @@ export const search2DMatrix: Problem = {
   `,
 	starterCode: starterCodeSearch2DMatrixJS,
 	handlerFunction: search2DMatrixHandler,
-	starterFunctionName: "function searchMatrix",
+	starterFunctionName: "def search_matrix(",
 	order: 5,
 };
